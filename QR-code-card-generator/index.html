@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>QR-code amFOSS</title>
+        <link rel="stylesheet" href="index.css">
+        <link rel="icon" href="backround.png">
+    </head>
+    <body>
+        <form>
+            <div id="form">
+                <h1>Contact Details</h1>
+                <input type="text" class="text_input" id="name_tag" placeholder="Name" style="margin-top: 10px;">
+                <input type="text" class="text_input" id="email_tag" placeholder="Email Address"><br>
+                <input type="text" class="text_input" id="twitter_tag" placeholder="Twitter"><br>
+                <input type="text" class="text_input" id="github_tag" placeholder="GitHub User Name"><br>
+                <button class="Button_input" id="create_button" style="margin-top: 10px;">CREATE</button>
+                <button class="Button_input" id="clear_button" style="margin-bottom: 30px;" onclick="clear_text_box()">CLEAR</button>
+            </div>
+        </form>
+
+        <div class="overlay" id="overlay">
+            <div class="modal">
+                <div class="modal-header">
+                    <h2>QR Code</h2>
+                    <button id="closeBtn">&times;</button>
+                </div>
+                <div class="modal-content">
+                    <div id="placeHolder"></div>
+                    <span class="display_table">
+                        <h5 id="name_show" style="margin-bottom: 0px; margin-top: 15px;">Name: </h5>
+                        <h5 id="name_display" style="margin-top: 0px;"></h5>
+                        <h5 id="email_show" style="margin-bottom: 0px;">Email Id:</h5>
+                        <h5 id="email_display" style="margin-top: 0px;"></h5>
+                        <h5 id="twitter_show" style="margin-bottom: 0px;">Twitter</h5>
+                        <h5 id="twitter_display" style="margin-top: 0px;"></h5>
+                        <h5 id="github_show" style="margin-bottom: 0px;">GitHub:</h5>
+                        <h5 id="github_display" style="margin-top: 0px;"></h5>
+                    </span>
+                </div>
+            </div>
+        </div>
+
+
+        <script src="index.js"></script>
+        <script type="text/javascript" src="node_modules\qrcode-generator\qrcode.js"></script>
+    </body>
+</html>
