@@ -1,0 +1,135 @@
+body{
+  box-sizing: border-box;
+  margin-left: auto;
+  margin-right: auto;
+  background-color: #3dd93d;
+  font-family: Arial, Helvetica, sans-serif;
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+
+
+#myInput{
+  width: 100%;
+  box-sizing: border-box;
+  margin-right: 2px;
+  border-radius: 5px;
+  border-width: 1px;
+}
+
+.inputPannel{
+  box-sizing: border-box;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+
+.main{
+  margin-left: auto;
+  margin-right: auto;
+  background-color: white;
+  padding: 20px;
+  border-radius: 10px;
+  width: max-content;
+  height: max-content;
+}
+
+html{
+  display: flex;
+  justify-content: center;
+}
+
+h2{
+  padding-bottom: 2px;
+  margin: 0px;
+  font-size: 20px;
+  font-style: bold;
+}
+
+h5{
+  margin-top: 3px;
+  font-size: 10px;
+  font-style: italic;
+  color: gray;
+  margin-bottom: 12.5px;
+}
+
+.addBtn{
+  padding-right: 15px;
+  padding-left: 15px;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  background-color: rgb(41, 218, 83);
+  color: white;
+  border-radius: 20px;
+  font-size: 12px;
+  border: 0ch;
+  align-self: left;
+}
+
+.checked{
+  background-color: rgb(219, 219, 219);
+  color: rgb(103, 103, 103);
+}
+
+.close{
+  text-decoration: none;
+}
+
+.myDIV{
+  padding: 0%;
+}
+
+ul{
+  /* padding-left: 20px;
+  padding-right: 20px; */
+  padding-left: 0%;
+  margin-top: 25px;
+}
+
+li{
+  text-decoration: none;
+  display: flex;
+  justify-content: space-between;
+  font-size: 15px;
+  font-weight: 10px;
+  padding-left: 5px;
+  width: 100%;
+}
+
+.closeBtn{
+  border: 0ch;
+  color: red;
+  background-color: transparent;
+  text-decoration: none;
+}
+
+.navBtn{
+  border-radius: 10px;
+  border: 0ch;
+  color: white;
+  padding-left: 20px;
+  padding-right: 20px;
+  padding-top: 2px;
+  padding-bottom: 2px;
+  margin-top: 10px;
+  font-weight: lighter;
+  font-size: 15px;
+}
+
+.clearCompleteBtn{
+  background-color: rgb(51, 83, 243);
+  text-decoration: none;
+}
+
+.emptyListBtn{
+  background-color: red;
+}
+
+.saveListBtn{
+  background-color: rgb(61, 217, 61);;
+}

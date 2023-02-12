@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1">    
+        <link rel="stylesheet" href="index.css">
+        <link rel="icon" href="backround.png">
+        <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='index.css') }}">
+
+    </head>
+    <body>
+        <div class="main">
+            <form id="myDIV" class="header" method="post" action="{{ url_for('add')}}">
+                <h2><b>My To Do List</h2>
+                <h5>Click On item to mark it complete</h5>
+                <div class="inputPannel">
+                <input type="text" id="myInput" placeholder="Title..." name="todoTask">
+                <button type="submit" class="addBtn">Add</button>
+                </div>
+            </from>
+
+            <ul id="myUL">
+                {% for i in to_list %}
+                    {% if i.status=='complete' %} 
+                        <li class="checked"><a href="{{ url_for('unmark', id = i.id) }}" style="text-decoration: line-through; color: rgb(103, 103, 103);">{{i.task}}</a><a href="{{ url_for('remove', id = i.id) }}" class="closeBtn" style="text-decoration:none;">&times;</a></li>
+                    {% else %} 
+                        <li><a href="{{ url_for('mark', id = i.id) }}" style="text-decoration: none; color: gray;">{{i.task}}</a><a href="{{ url_for('remove', id = i.id) }}" class="closeBtn" style="text-decoration:none;">&times;</a></li>
+                    {% endif %} 
+                {% endfor %}
+            </ul>
+            <div class="nav">
+                <a href="{{ url_for('clear') }}" class="navBtn clearCompleteBtn" >Clear Completed</a>
+                <a href="{{ url_for('clearall') }}" class="navBtn emptyListBtn" style="text-decoration: none;"">Empty List</a>
+            </div>
+        </div>
+
+        <!-- <script src="index.js"></script> -->
+
+    </body>
+</html>
